@@ -48,7 +48,7 @@ rm temp.zip
 ```sh
 sudo install /var/www/html/zonemaster-web-gui/zonemaster.conf-example /etc/httpd/conf.d/zonemaster.conf
 ```
-Then update the zonemaster.conf file with your own ServerName, ServerAlias, ServerAdmin
+Then update the zonemaster.conf file with your own [ServerName], [ServerAlias], [ServerAdmin].
 
 #### Reload httpd
 
@@ -93,7 +93,7 @@ sudo chown -R www-data:www-data /var/www #Change owner of the directory
 sudo install /var/www/html/zonemaster-web-gui/zonemaster.conf-example /etc/apache2/sites-available/zonemaster.conf
 sudo a2ensite zonemaster #Activate the website
 ```
-Then update the zonemaster.conf file with your own ServerName, ServerAlias and ServerAdmin.
+Then update the zonemaster.conf file with your own [ServerName], [ServerAlias] and [ServerAdmin].
 For testing on a local machine, you can edit zonemaster.conf and change the "*:80" part of 
 to the host's IP or using localhost as ServerName if that is appropriate.
 
@@ -148,7 +148,7 @@ rm temp.zip
 ```sh
 install /var/www/html/zonemaster-web-gui/zonemaster.conf-example /etc/httpd/conf.d/zonemaster.conf
 ```
-Then update the zonemaster.conf file with your own ServerName, ServerAlias, ServerAdmin
+Then update the zonemaster.conf file with your own [ServerName], [ServerAlias], [ServerAdmin].
 
 #### Reload Apache
 
@@ -183,6 +183,9 @@ And when the mouse over this text, it display all version of the zonemaster stac
 [Declaration of prerequisites]: https://github.com/zonemaster/zonemaster/blob/master/README.md#prerequisites
 [JSON-RPC API]: https://github.com/zonemaster/zonemaster-backend/blob/master/docs/API.md
 [Main Zonemaster repository]: https://github.com/zonemaster/zonemaster/blob/master/README.md
+[ServerAdmin]: https://httpd.apache.org/docs/2.4/mod/core.html#serveradmin
+[ServerAlias]: https://httpd.apache.org/docs/2.4/mod/core.html#serveralias
+[ServerName]: https://httpd.apache.org/docs/2.4/mod/core.html#servername
 [Zonemaster::Backend installation]: https://github.com/zonemaster/zonemaster-backend/blob/master/docs/Installation.md
 [Zonemaster::Backend]: https://github.com/zonemaster/zonemaster-backend/blob/master/README.md
 [Zonemaster::CLI installation]: https://github.com/zonemaster/zonemaster-cli/blob/master/docs/Installation.md
