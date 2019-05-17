@@ -26,14 +26,15 @@ This instruction covers the following operating systems:
 
 ### 1. CentOS
 
-* Install Httpd (Apache):
+#### Install Httpd (Apache)
 
 ```sh
 sudo yum update
 sudo yum install httpd
 ```
 
-* Install Zonemaster Web GUI
+#### Install Zonemaster Web GUI
+
 ```sh
 wget https://github.com/zonemaster/zonemaster-gui/releases/download/v3.0.1/zonemaster_web_gui.zip -O temp.zip
 sudo mkdir -p  /var/www/html/zonemaster-web-gui
@@ -42,14 +43,15 @@ sudo unzip temp.zip -d /var/www/html/zonemaster-web-gui
 rm temp.zip
 ```
 
-* Basic httpd configuration:
+#### Basic httpd configuration
 
 ```sh
 sudo install /var/www/html/zonemaster-web-gui/zonemaster.conf-example /etc/httpd/conf.d/zonemaster.conf
 ```
 Then update the zonemaster.conf file with your own ServerName, ServerAlias, ServerAdmin
 
-* Reload httpd
+#### Reload httpd
+
 ```sh
 sudo systemctl enable httpd
 sudo systemctl reload httpd
@@ -68,7 +70,8 @@ sudo a2enmod rewrite
 sudo systemctl restart apache2
 ```
 
-* Install Zonemaster Web GUI
+#### Install Zonemaster Web GUI
+
 ```sh
 wget https://github.com/zonemaster/zonemaster-gui/releases/download/v3.0.1/zonemaster_web_gui.zip -O temp.zip
 sudo mkdir -p  /var/www/html/zonemaster-web-gui
@@ -83,7 +86,7 @@ and go back and run it again above:
 sudo apt-get install unzip
 ```
 
-* Basic apache2 configuration:
+#### Basic apache2 configuration
 
 ```sh
 sudo chown -R www-data:www-data /var/www #Change owner of the directory 
@@ -95,7 +98,7 @@ For testing on a local machine, you can edit zonemaster.conf and change the "*:8
 to the host's IP or using localhost as ServerName if that is appropriate.
 
 
-* Reload apache
+#### Reload apache
 
 ```sh
 sudo systemctl enable apache2
@@ -107,7 +110,7 @@ For all commands below, acquire privileges, i.e. become root:
 
 ``su -l``
 
-* Install Apache ([source](https://www.digitalocean.com/community/tutorials/how-to-install-an-apache-mysql-and-php-famp-stack-on-freebsd-10-1)):
+#### Install Apache ([source](https://www.digitalocean.com/community/tutorials/how-to-install-an-apache-mysql-and-php-famp-stack-on-freebsd-10-1))
 
 ``pkg install apache24``
 
@@ -124,13 +127,14 @@ Now start Apache:
  
 ``service apache24 start``
 
-* Install Wget :
+#### Install Wget
 
 ```sh
 pkg install wget
 ```
 
-* Install Zonemaster Web GUI
+#### Install Zonemaster Web GUI
+
 ```sh
 wget https://github.com/zonemaster/zonemaster-gui/releases/download/v3.0.1/zonemaster_web_gui.zip -O temp.zip
 mkdir -p  /var/www/html/zonemaster-web-gui
@@ -139,14 +143,15 @@ unzip temp.zip -d /var/www/html/zonemaster-web-gui
 rm temp.zip
 ```
 
-* Basic Apache configuration:
+#### Basic Apache configuration
 
 ```sh
 install /var/www/html/zonemaster-web-gui/zonemaster.conf-example /etc/httpd/conf.d/zonemaster.conf
 ```
 Then update the zonemaster.conf file with your own ServerName, ServerAlias, ServerAdmin
 
-* Reload Apache
+#### Reload Apache
+
 ```sh
 service apache24 restart
 ```
